@@ -66,6 +66,7 @@ ClassManage
     Click Element    ${ClassRoom}
     Wait Until Element Is Visible    ${ExitClassroom}    30s
     Click Element    ${ExitClassroom}
+    sleep    5s
 
 Curriculum
     Wait Until Element Is Visible    ${Curriculum}    30s
@@ -84,12 +85,14 @@ Implementation
     Click Element    ${Implementation}
     Wait Until Element Is Visible    ${ExitImplementation}    30s
     Click Element    ${ExitImplementation}
+    Sleep    5s
 
 PostTest
     Wait Until Element Is Visible    ${PostTest}    30s
     Click Element    ${PostTest}
     Wait Until Element Is Visible    ${ExitPost}    30s
     Click Element    ${ExitPost}
+    Sleep    5s
 
 Writer
     Wait Until Element Is Visible    ${Writer}    30s
