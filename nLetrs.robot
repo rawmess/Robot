@@ -60,49 +60,56 @@ Journal
 IntroExitSession
     Wait Until Element Is Visible    ${ExitIntro}    30s
     Click Element    ${ExitIntro}
+    Sleep    3s
 
 ClassManage
     Wait Until Element Is Visible    ${ClassRoom}    30s
     Click Element    ${ClassRoom}
     Wait Until Element Is Visible    ${ExitClassroom}    30s
     Click Element    ${ExitClassroom}
+    Sleep    3s
 
 Curriculum
     Wait Until Element Is Visible    ${Curriculum}    30s
     Click Element    ${Curriculum}
     Wait Until Element Is Visible    ${ExitCurriculum}    30s
     Click Element    ${ExitCurriculum}
+    Sleep    3s
 
 Assessment
     Wait Until Element Is Visible    ${Assessment}    30s
     Click Element    ${Assessment}
     Wait Until Element Is Visible    ${ExitAssessement}    30s
     Click Element    ${ExitAssessement}
+    Sleep    3s
 
 Implementation
     Wait Until Element Is Visible    ${Implementation}    30s
     Click Element    ${Implementation}
     Wait Until Element Is Visible    ${ExitImplementation}    30s
     Click Element    ${ExitImplementation}
+    Sleep    5s
 
 PostTest
     Wait Until Element Is Visible    ${PostTest}    30s
     Click Element    ${PostTest}
     Wait Until Element Is Visible    ${ExitPost}    30s
     Click Element    ${ExitPost}
-    Sleep    10s
+    Sleep    5s
 
 Writer
     Wait Until Element Is Visible    ${Writer}    30s
     Click Element    ${Writer}
     Wait Until Element Is Visible    ${ExitWriter}    30s
     Click Element    ${ExitWriter}
+    Sleep    3s
 
 Differentiating
     Wait Until Element Is Visible    ${Differentiating}    30s
     Click Element    ${Differentiating}
     Wait Until Element Is Visible    ${ExitDiff}    30s
     Click Element    ${ExitDiff}
+    Sleep    3s
 
 Logout
     Wait Until Element Is Visible    ${Ham}    30s
