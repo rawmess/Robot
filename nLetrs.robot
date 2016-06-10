@@ -1,6 +1,3 @@
-*** Settings ***
-Library           Selenium2Library
-
 *** Variables ***
 ${Intro}          xpath=//*[@id="sidebar-cubes"]/div[1]    # Introduction
 ${PreTest}        xpath=//*[@id="sidebar-cubes"]/div    # Click PresTest
@@ -31,11 +28,11 @@ ${LoginBtn}       id=loginBtn    # Click Login
 
 *** Test Cases ***
 Login
-    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    ff
+    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    chrome
     Maximize Browser Window
     Wait Until Element Is Visible    loginBtn    30s
-    Input Text    ${Username}    nitesh
-    Input Password    ${Password}    nitesh
+    Input Text    ${Username}    ramesh
+    Input Password    ${Password}    ramesh
     Click Button    ${LoginBtn}
 
 LetrPre
@@ -45,7 +42,6 @@ LetrPre
     Wait Until Element Is Visible    ${PreTestExit}    30s
     Click Element    ${PreTestExit}
     Sleep    5s
-    [Teardown]
 
 Intro
     Wait Until Element Is Visible    ${Intro}    30s
@@ -60,13 +56,14 @@ Journal
 IntroExitSession
     Wait Until Element Is Visible    ${ExitIntro}    30s
     Click Element    ${ExitIntro}
-    sleep    5s
+    Sleep    5s
 
 ClassManage
     Wait Until Element Is Visible    ${ClassRoom}    30s
     Click Element    ${ClassRoom}
     Wait Until Element Is Visible    ${ExitClassroom}    30s
     Click Element    ${ExitClassroom}
+    sleep    5s
 
 Curriculum
     Wait Until Element Is Visible    ${Curriculum}    30s
@@ -114,3 +111,15 @@ Logout
     Click Link    logout
 
 *** Keywords ***
+Scroll To Page Location
+    [Arguments]    ${x_location}    ${y_location}
+    Execute Javascript    window.scrollTo(${x_location}, ${y_location})
+
+I login to the sidebar app
+    [Arguments]    ${uname}='nitesh'    ${password}='nitesh'
+    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    ff
+    Maximize Browser Window
+    Wait Until Element Is Visible    loginBtn    30s
+    Input Text    username    ${uname}
+    Input Password    password    ${password}
+    Click Button    loginBtn
