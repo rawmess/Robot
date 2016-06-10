@@ -1,3 +1,6 @@
+*** Settings ***
+Library           Selenium2Library
+
 *** Variables ***
 ${Intro}          xpath=//*[@id="sidebar-cubes"]/div[1]    # Introduction
 ${PreTest}        xpath=//*[@id="sidebar-cubes"]/div    # Click PresTest
