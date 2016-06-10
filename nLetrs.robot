@@ -31,11 +31,11 @@ ${LoginBtn}       id=loginBtn    # Click Login
 
 *** Test Cases ***
 Login
-    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    chrome
+    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    ff
     Maximize Browser Window
     Wait Until Element Is Visible    loginBtn    30s
-    Input Text    ${Username}    ramesh
-    Input Password    ${Password}    ramesh
+    Input Text    ${Username}    nitesh
+    Input Password    ${Password}    nitesh
     Click Button    ${LoginBtn}
 
 LetrPre
@@ -60,13 +60,13 @@ Journal
 IntroExitSession
     Wait Until Element Is Visible    ${ExitIntro}    30s
     Click Element    ${ExitIntro}
+    sleep    5s
 
 ClassManage
     Wait Until Element Is Visible    ${ClassRoom}    30s
     Click Element    ${ClassRoom}
     Wait Until Element Is Visible    ${ExitClassroom}    30s
     Click Element    ${ExitClassroom}
-    sleep    5s
 
 Curriculum
     Wait Until Element Is Visible    ${Curriculum}    30s
@@ -89,6 +89,7 @@ Implementation
 
 PostTest
     Wait Until Element Is Visible    ${PostTest}    30s
+    Sleep    5s
     Click Element    ${PostTest}
     Wait Until Element Is Visible    ${ExitPost}    30s
     Click Element    ${ExitPost}
@@ -113,15 +114,3 @@ Logout
     Click Link    logout
 
 *** Keywords ***
-Scroll To Page Location
-    [Arguments]    ${x_location}    ${y_location}
-    Execute Javascript    window.scrollTo(${x_location}, ${y_location})
-
-I login to the sidebar app
-    [Arguments]    ${uname}='nitesh'    ${password}='nitesh'
-    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    ff
-    Maximize Browser Window
-    Wait Until Element Is Visible    loginBtn    30s
-    Input Text    username    ${uname}
-    Input Password    password    ${password}
-    Click Button    loginBtn
