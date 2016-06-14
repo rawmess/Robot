@@ -31,7 +31,7 @@ ${LoginBtn}       id=loginBtn    # Click Login
 
 *** Test Cases ***
 Login
-    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    chrome
+    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    gc
     Maximize Browser Window
     Wait Until Element Is Visible    loginBtn    30s
     Input Text    ${Username}    ramesh
@@ -112,7 +112,7 @@ Logout
     Click Element    ${Ham}
     Wait Until Element Is Visible    ${waitLogout}    30s
     Click Link    logout
-    Close Browser
+    
 
 *** Keywords ***
 Scroll To Page Location
