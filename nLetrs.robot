@@ -31,7 +31,7 @@ ${LoginBtn}       id=loginBtn    # Click Login
 
 *** Test Cases ***
 Login
-    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    ff
+    Open Browser    https://qa.lp.voyagersopris.com/#nletrs    chrome
     Maximize Browser Window
     Wait Until Element Is Visible    loginBtn    30s
     Input Text    ${Username}    ramesh
